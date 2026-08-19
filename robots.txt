@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 User-agent: *
 Allow: /
 
 Sitemap: https://uniquevacations.in/sitemap.xml
+=======
+User-agent: *
+Allow: /
+
+Sitemap: https://uniquevacations.in/sitemap.xml
+>>>>>>> 68381d8bbfe7f4189deafe9ee465ba6e3cd8eda5
