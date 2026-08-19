@@ -20,6 +20,73 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <link rel="icon" href="images/logo.png" type="image/png">
+
+    <style>
+        /* ==========================================
+           DIRECTOR PROFILE
+        =========================================== */
+
+        .director-profile {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            margin-top: 28px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .director-photo {
+            width: 105px;
+            height: 105px;
+            flex: 0 0 105px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--accent-light);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .director-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .director-info h4 {
+            margin: 0 0 6px;
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--accent-light);
+        }
+
+        .director-info .director-role {
+            margin: 0 0 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .director-info p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+
+            .director-profile {
+                align-items: flex-start;
+            }
+
+            .director-photo {
+                width: 85px;
+                height: 85px;
+                flex-basis: 85px;
+            }
+        }
+    </style>
+
 </head>
 
 
@@ -35,7 +102,10 @@
 
         <main>
 
-            <!-- PAGE HERO -->
+            <!-- ==========================================
+                 PAGE HERO
+            =========================================== -->
+
             <div class="page-hero">
 
                 <div class="container">
@@ -51,7 +121,10 @@
             </div>
 
 
-            <!-- CONTACT SECTION -->
+            <!-- ==========================================
+                 CONTACT SECTION
+            =========================================== -->
+
             <section class="section">
 
                 <div class="container">
@@ -110,9 +183,49 @@
                             </p>
 
 
-                            <!-- BUTTONS -->
+                            <!-- =====================================
+                                 DIRECTOR PROFILE
+                            ====================================== -->
 
-                            <div class="cta-row">
+                            <div class="director-profile">
+
+                                <div class="director-photo">
+
+                                    <img
+                                        src="images/director.jpg"
+                                        alt="Director - Unique Vacations India"
+                                        loading="lazy"
+                                    >
+
+                                </div>
+
+
+                                <div class="director-info">
+
+                                    <h4>
+                                        Mr. Avinash Jagariya
+                                    </h4>
+
+                                    <div class="director-role">
+                                        Director — Unique Vacations India
+                                    </div>
+
+                                    <p>
+                                        Dedicated to creating memorable,
+                                        comfortable and personalised travel
+                                        experiences for every traveller.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- =====================================
+                                 BUTTONS
+                            ====================================== -->
+
+                            <div class="cta-row" style="margin-top:24px;">
 
                                 <!-- WHATSAPP -->
 
@@ -157,7 +270,6 @@
                             ">
                                 Send an Enquiry
                             </h3>
-
 
 
                             <!-- FULL NAME -->
@@ -221,7 +333,7 @@
 
 
                             <!-- =====================================
-                                 TRAVEL TYPE
+                                 DESTINATION TYPE
                             ====================================== -->
 
                             <div class="form-group">
@@ -271,7 +383,6 @@
                                 <select
                                     id="destination"
                                     name="destination"
-                                    required
                                 >
 
                                     <option value="">
@@ -377,11 +488,6 @@
 
         document.addEventListener("DOMContentLoaded", function () {
 
-
-            /* ==========================================
-               ELEMENTS
-            =========================================== */
-
             const travelType =
                 document.getElementById("travelType");
 
@@ -402,81 +508,44 @@
             const domesticDestinations = [
 
                 "Goa",
-
                 "Kerala",
-
                 "Rajasthan",
-
                 "Ladakh",
-
                 "Kashmir",
-
                 "Himachal Pradesh",
-
                 "Andaman & Nicobar",
-
                 "Uttarakhand",
-
                 "Uttar Pradesh",
-
                 "Varanasi",
-
                 "Agra",
-
                 "Jaipur",
-
                 "Jodhpur",
-
                 "Udaipur",
-
                 "Jaisalmer",
-
                 "Delhi",
-
                 "Mumbai",
-
                 "Manali",
-
                 "Shimla",
-
                 "Dharamshala",
-
                 "Rishikesh",
-
                 "Haridwar",
-
                 "Amritsar",
-
                 "Sikkim",
-
                 "Darjeeling",
-
                 "North East India",
-
                 "Madhya Pradesh",
-
                 "Gujarat",
-
                 "Maharashtra",
-
                 "Tamil Nadu",
-
                 "Karnataka",
-
                 "Andhra Pradesh",
-
                 "Odisha",
-
                 "Pondicherry",
-
                 "Lakshadweep",
-
                 "Golden Triangle",
-
                 "Custom / Multiple"
 
             ];
-
 
 
             /* ==========================================
@@ -486,105 +555,56 @@
             const internationalDestinations = [
 
                 "Dubai",
-
                 "Abu Dhabi",
-
                 "Sharjah",
-
                 "Singapore",
-
                 "Malaysia",
-
                 "Bali",
-
                 "Indonesia",
-
                 "Thailand",
-
                 "Phuket",
-
                 "Bangkok",
-
                 "Maldives",
-
                 "Sri Lanka",
-
                 "Mauritius",
-
                 "Seychelles",
-
                 "Vietnam",
-
                 "Cambodia",
-
                 "Hong Kong",
-
                 "Macau",
-
                 "Japan",
-
                 "South Korea",
-
                 "Australia",
-
                 "New Zealand",
-
                 "Europe",
-
                 "France",
-
                 "Paris",
-
                 "Italy",
-
                 "Switzerland",
-
                 "Germany",
-
                 "Netherlands",
-
                 "Spain",
-
                 "Greece",
-
                 "United Kingdom",
-
                 "London",
-
                 "Turkey",
-
                 "Egypt",
-
                 "South Africa",
-
                 "USA",
-
                 "Canada",
-
                 "Mexico",
-
                 "Brazil",
-
                 "Saudi Arabia",
-
                 "Qatar",
-
                 "Oman",
-
                 "Jordan",
-
                 "Georgia",
-
                 "Azerbaijan",
-
                 "Armenia",
-
                 "Uzbekistan",
-
                 "International Custom / Multiple"
 
             ];
-
 
 
             /* ==========================================
@@ -595,14 +615,8 @@
 
                 const selectedType = this.value;
 
-
-                /* Clear old destinations */
-
                 destination.innerHTML =
                     '<option value="">Select a destination</option>';
-
-
-                /* No type selected */
 
                 if (!selectedType) {
 
@@ -614,18 +628,11 @@
 
                 }
 
-
-                /* Show destination field */
-
                 destinationGroup.style.display = "block";
 
                 destination.required = true;
 
-
                 let destinations = [];
-
-
-                /* Domestic */
 
                 if (selectedType === "Domestic") {
 
@@ -633,17 +640,11 @@
 
                 }
 
-
-                /* International */
-
                 if (selectedType === "International") {
 
                     destinations = internationalDestinations;
 
                 }
-
-
-                /* Add destinations */
 
                 destinations.forEach(function (place) {
 
@@ -661,7 +662,6 @@
             });
 
 
-
             /* ==========================================
                FORM SUBMIT
             =========================================== */
@@ -671,55 +671,43 @@
                 event.preventDefault();
 
 
-                /* ==========================================
-                   GET FORM VALUES
-                =========================================== */
-
                 const name =
                     document.getElementById("fullName")
                     .value
                     .trim();
-
 
                 const email =
                     document.getElementById("email")
                     .value
                     .trim();
 
-
                 const phone =
                     document.getElementById("phone")
                     .value
                     .trim();
 
-
                 const type =
                     document.getElementById("travelType")
                     .value;
 
-
                 const selectedDestination =
                     document.getElementById("destination")
                     .value;
-
 
                 const travelDates =
                     document.getElementById("travelDates")
                     .value
                     .trim();
 
-
                 const travelers =
                     document.getElementById("travelers")
                     .value
                     .trim();
 
-
                 const message =
                     document.getElementById("message")
                     .value
                     .trim();
-
 
 
                 /* ==========================================
@@ -741,7 +729,6 @@
                     return;
 
                 }
-
 
 
                 /* ==========================================
@@ -775,7 +762,6 @@ Thank you.
 `;
 
 
-
                 /* ==========================================
                    WHATSAPP NUMBER
                 =========================================== */
@@ -783,11 +769,6 @@ Thank you.
                 const whatsappNumber =
                     "919785942039";
 
-
-
-                /* ==========================================
-                   CREATE WHATSAPP URL
-                =========================================== */
 
                 const encodedMessage =
                     encodeURIComponent(
@@ -798,11 +779,6 @@ Thank you.
                 const whatsappURL =
                     `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
-
-
-                /* ==========================================
-                   OPEN WHATSAPP
-                =========================================== */
 
                 window.open(
                     whatsappURL,
@@ -815,7 +791,6 @@ Thank you.
         });
 
     </script>
-
 
 
     <!-- MAIN JS -->
