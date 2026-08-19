@@ -5,18 +5,13 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>
-        Destinations — Unique Vacations India
-    </title>
+    <title>Destinations — Unique Vacations India</title>
 
     <meta
         name="description"
-        content="Explore top travel destinations in India — Goa, Kerala, Rajasthan, Ladakh, Kashmir, Himachal, Andaman & more."
+        content="Explore domestic and international travel destinations with Unique Vacations India."
     >
 
     <meta
@@ -31,7 +26,7 @@
 
     <meta
         property="og:description"
-        content="Explore beautiful destinations across India with Unique Vacations."
+        content="Explore beautiful domestic and international destinations with Unique Vacations."
     >
 
     <meta
@@ -79,6 +74,92 @@
         type="image/png"
     >
 
+    <style>
+
+        /* =========================================
+           DESTINATION FILTER
+        ========================================= */
+
+        .destination-filter {
+            max-width: 420px;
+            margin: 0 auto 45px;
+            text-align: center;
+        }
+
+        .destination-filter label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--accent-light);
+            font-size: 1rem;
+        }
+
+        .destination-filter select {
+            width: 100%;
+            padding: 14px 18px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.06);
+            color: inherit;
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .destination-filter select:focus {
+            border-color: var(--accent-light);
+        }
+
+        .destination-filter select option {
+            background: #101b2d;
+            color: #fff;
+        }
+
+        /* =========================================
+           DESTINATION GROUP
+        ========================================= */
+
+        .destination-group {
+            display: none;
+        }
+
+        .destination-group.active {
+            display: block;
+        }
+
+        .destination-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .destination-heading h2 {
+            margin-bottom: 8px;
+        }
+
+        .destination-heading p {
+            color: var(--muted);
+        }
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 600px) {
+
+            .destination-filter {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .destination-filter select {
+                padding: 13px 15px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
@@ -94,16 +175,16 @@
     <div class="site-wrap">
 
 
-        <!-- Header loaded by main.js -->
+        <!-- Header -->
         <div id="site-header"></div>
 
 
         <main>
 
 
-            <!-- =================================================
+            <!-- =========================================
                  PAGE HERO
-            ================================================== -->
+            ========================================== -->
 
             <div class="page-hero">
 
@@ -114,8 +195,8 @@
                     </h1>
 
                     <p>
-                        From coast to mountains —
-                        discover India's diverse landscapes
+                        Explore incredible destinations
+                        across India and around the world
                     </p>
 
                 </div>
@@ -123,481 +204,1099 @@
             </div>
 
 
-
-            <!-- =================================================
-                 DESTINATIONS
-            ================================================== -->
+            <!-- =========================================
+                 DESTINATIONS SECTION
+            ========================================== -->
 
             <section class="section">
 
                 <div class="container">
 
 
-                    <div class="grid-3">
+                    <!-- =================================
+                         DESTINATION TYPE DROPDOWN
+                    ================================== -->
 
+                    <div class="destination-filter">
 
-                        <!-- =========================
-                             GOA
-                        ========================== -->
+                        <label for="destinationType">
+                            Destination Interest
+                        </label>
 
-                        <article
-                            class="glass dest-card reveal"
+                        <select
+                            id="destinationType"
+                            name="destinationType"
                         >
 
-                            <div class="dest-img">
+                            <option value="domestic">
+                                Domestic
+                            </option>
 
-                                <img
-                                    src="images/Goa.jpg"
-                                    alt="Goa Beach"
-                                    loading="lazy"
-                                >
+                            <option value="international">
+                                International
+                            </option>
 
-                                <h3>
-                                    Goa
-                                </h3>
+                        </select>
 
-                            </div>
+                    </div>
 
 
-                            <div class="dest-body">
+                    <!-- =================================
+                         DOMESTIC DESTINATIONS
+                    ================================== -->
 
-                                <p>
-                                    Sun, sand & sea. Explore North & South Goa
-                                    beaches, spice plantations, Dudhsagar Falls
-                                    & Portuguese churches.
-                                </p>
+                    <div
+                        id="domesticDestinations"
+                        class="destination-group active"
+                    >
+
+                        <div class="destination-heading">
+
+                            <h2>
+                                Popular Indian Destinations
+                            </h2>
+
+                            <p>
+                                Discover the beauty, culture and adventure of India
+                            </p>
+
+                        </div>
 
 
-                                <div class="dest-meta">
+                        <div class="grid-3">
 
-                                    <span class="dest-price">
-                                        From ₹8,999
-                                    </span>
 
-                                    <span class="dest-tag">
-                                        3–5 Days
-                                    </span>
+                            <!-- GOA -->
+
+                            <article class="glass dest-card reveal">
+
+                                <div class="dest-img">
+
+                                    <img
+                                        src="images/Goa.jpg"
+                                        alt="Goa Beach"
+                                        loading="lazy"
+                                    >
+
+                                    <h3>
+                                        Goa
+                                    </h3>
 
                                 </div>
 
+                                <div class="dest-body">
 
-                                <a
-                                    href="contact.html"
-                                    class="link-arrow"
-                                >
-                                    Plan Trip →
-                                </a>
+                                    <p>
+                                        Sun, sand & sea. Explore North & South Goa
+                                        beaches, spice plantations, Dudhsagar Falls
+                                        & Portuguese churches.
+                                    </p>
 
-                            </div>
+                                    <div class="dest-meta">
 
-                        </article>
+                                        <span class="dest-price">
+                                            From ₹8,999
+                                        </span>
 
+                                        <span class="dest-tag">
+                                            3–5 Days
+                                        </span>
 
+                                    </div>
 
-                        <!-- =========================
-                             KERALA
-                        ========================== -->
-
-                        <article
-                            class="glass dest-card reveal"
-                        >
-
-                            <div class="dest-img">
-
-                                <img
-                                    src="images/kerala.jpg"
-                                    alt="Kerala Backwaters"
-                                    loading="lazy"
-                                >
-
-                                <h3>
-                                    Kerala
-                                </h3>
-
-                            </div>
-
-
-                            <div class="dest-body">
-
-                                <p>
-                                    God's Own Country. Backwaters,
-                                    Munnar tea hills, Wayanad wildlife
-                                    & Ayurvedic wellness retreats.
-                                </p>
-
-
-                                <div class="dest-meta">
-
-                                    <span class="dest-price">
-                                        From ₹12,499
-                                    </span>
-
-                                    <span class="dest-tag">
-                                        5–7 Days
-                                    </span>
+                                    <a
+                                        href="contact.html?destination=Goa"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
 
                                 </div>
 
-
-                                <a
-                                    href="contact.html"
-                                    class="link-arrow"
-                                >
-                                    Plan Trip →
-                                </a>
-
-                            </div>
-
-                        </article>
+                            </article>
 
 
+                            <!-- KERALA -->
 
-                        <!-- =========================
-                             RAJASTHAN
-                        ========================== -->
+                            <article class="glass dest-card reveal">
 
-                        <article
-                            class="glass dest-card reveal"
-                        >
+                                <div class="dest-img">
 
-                            <div class="dest-img">
+                                    <img
+                                        src="images/kerala.jpg"
+                                        alt="Kerala Backwaters"
+                                        loading="lazy"
+                                    >
 
-                                <img
-                                    src="images/rajasthan.jpg"
-                                    alt="Rajasthan Palace and Heritage"
-                                    loading="lazy"
-                                >
-
-                                <h3>
-                                    Rajasthan
-                                </h3>
-
-                            </div>
-
-
-                            <div class="dest-body">
-
-                                <p>
-                                    Land of Kings. Jaipur, Udaipur,
-                                    Jaisalmer, Jodhpur — forts, palaces,
-                                    desert camps & folk culture.
-                                </p>
-
-
-                                <div class="dest-meta">
-
-                                    <span class="dest-price">
-                                        From ₹10,999
-                                    </span>
-
-                                    <span class="dest-tag">
-                                        6–8 Days
-                                    </span>
+                                    <h3>
+                                        Kerala
+                                    </h3>
 
                                 </div>
 
+                                <div class="dest-body">
 
-                                <a
-                                    href="contact.html"
-                                    class="link-arrow"
-                                >
-                                    Plan Trip →
-                                </a>
+                                    <p>
+                                        God's Own Country. Backwaters,
+                                        Munnar tea hills, Wayanad wildlife
+                                        & Ayurvedic wellness retreats.
+                                    </p>
 
-                            </div>
+                                    <div class="dest-meta">
 
-                        </article>
+                                        <span class="dest-price">
+                                            From ₹12,499
+                                        </span>
 
+                                        <span class="dest-tag">
+                                            5–7 Days
+                                        </span>
 
+                                    </div>
 
-                        <!-- =========================
-                             LADAKH
-                        ========================== -->
-
-                        <article
-                            class="glass dest-card reveal"
-                        >
-
-                            <div class="dest-img">
-
-                                <img
-                                    src="images/ladakh.jpg"
-                                    alt="Ladakh Mountains"
-                                    loading="lazy"
-                                >
-
-                                <h3>
-                                    Ladakh
-                                </h3>
-
-                            </div>
-
-
-                            <div class="dest-body">
-
-                                <p>
-                                    Roof of the world. Leh, Nubra Valley,
-                                    Pangong Lake, Khardung La & ancient
-                                    Buddhist monasteries.
-                                </p>
-
-
-                                <div class="dest-meta">
-
-                                    <span class="dest-price">
-                                        From ₹18,999
-                                    </span>
-
-                                    <span class="dest-tag">
-                                        7–9 Days
-                                    </span>
+                                    <a
+                                        href="contact.html?destination=Kerala"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
 
                                 </div>
 
-
-                                <a
-                                    href="contact.html"
-                                    class="link-arrow"
-                                >
-                                    Plan Trip →
-                                </a>
-
-                            </div>
-
-                        </article>
+                            </article>
 
 
+                            <!-- RAJASTHAN -->
 
-                        <!-- =========================
-                             KASHMIR
-                        ========================== -->
+                            <article class="glass dest-card reveal">
 
-                        <article
-                            class="glass dest-card reveal"
-                        >
+                                <div class="dest-img">
 
-                            <div class="dest-img">
+                                    <img
+                                        src="images/rajasthan.jpg"
+                                        alt="Rajasthan Palace"
+                                        loading="lazy"
+                                    >
 
-                                <img
-                                    src="images/kashmir.jpg"
-                                    alt="Kashmir Valley"
-                                    loading="lazy"
-                                >
-
-                                <h3>
-                                    Kashmir
-                                </h3>
-
-                            </div>
-
-
-                            <div class="dest-body">
-
-                                <p>
-                                    Paradise on Earth. Srinagar houseboats,
-                                    Gulmarg skiing, Pahalgam valleys
-                                    & Mughal gardens.
-                                </p>
-
-
-                                <div class="dest-meta">
-
-                                    <span class="dest-price">
-                                        From ₹15,999
-                                    </span>
-
-                                    <span class="dest-tag">
-                                        5–7 Days
-                                    </span>
+                                    <h3>
+                                        Rajasthan
+                                    </h3>
 
                                 </div>
 
+                                <div class="dest-body">
 
-                                <a
-                                    href="contact.html"
-                                    class="link-arrow"
-                                >
-                                    Plan Trip →
-                                </a>
+                                    <p>
+                                        Land of Kings. Jaipur, Udaipur,
+                                        Jaisalmer, Jodhpur — forts, palaces,
+                                        desert camps & folk culture.
+                                    </p>
 
-                            </div>
+                                    <div class="dest-meta">
 
-                        </article>
+                                        <span class="dest-price">
+                                            From ₹10,999
+                                        </span>
 
+                                        <span class="dest-tag">
+                                            6–8 Days
+                                        </span>
 
+                                    </div>
 
-                        <!-- =========================
-                             HIMACHAL PRADESH
-                        ========================== -->
-
-                        <article
-                            class="glass dest-card reveal"
-                        >
-
-                            <div class="dest-img">
-
-                                <img
-                                    src="images/himachal.jpg"
-                                    alt="Himachal Pradesh Mountains"
-                                    loading="lazy"
-                                >
-
-                                <h3>
-                                    Himachal Pradesh
-                                </h3>
-
-                            </div>
-
-
-                            <div class="dest-body">
-
-                                <p>
-                                    Himalayan escape. Manali, Shimla,
-                                    Dharamshala, Spiti — trekking,
-                                    skiing & mountain serenity.
-                                </p>
-
-
-                                <div class="dest-meta">
-
-                                    <span class="dest-price">
-                                        From ₹9,999
-                                    </span>
-
-                                    <span class="dest-tag">
-                                        4–6 Days
-                                    </span>
+                                    <a
+                                        href="contact.html?destination=Rajasthan"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
 
                                 </div>
 
-
-                                <a
-                                    href="contact.html"
-                                    class="link-arrow"
-                                >
-                                    Plan Trip →
-                                </a>
-
-                            </div>
-
-                        </article>
+                            </article>
 
 
+                            <!-- LADAKH -->
 
-                        <!-- =========================
-                             ANDAMAN
-                        ========================== -->
+                            <article class="glass dest-card reveal">
 
-                        <article
-                            class="glass dest-card reveal"
-                        >
+                                <div class="dest-img">
 
-                            <div class="dest-img">
+                                    <img
+                                        src="images/ladakh.jpg"
+                                        alt="Ladakh Mountains"
+                                        loading="lazy"
+                                    >
 
-                                <img
-                                    src="images/andaman.jpg"
-                                    alt="Andaman and Nicobar Islands"
-                                    loading="lazy"
-                                >
-
-                                <h3>
-                                    Andaman & Nicobar
-                                </h3>
-
-                            </div>
-
-
-                            <div class="dest-body">
-
-                                <p>
-                                    Tropical island paradise.
-                                    Havelock beaches, scuba diving,
-                                    Cellular Jail & bioluminescent waters.
-                                </p>
-
-
-                                <div class="dest-meta">
-
-                                    <span class="dest-price">
-                                        From ₹22,999
-                                    </span>
-
-                                    <span class="dest-tag">
-                                        5–7 Days
-                                    </span>
+                                    <h3>
+                                        Ladakh
+                                    </h3>
 
                                 </div>
 
+                                <div class="dest-body">
 
-                                <a
-                                    href="contact.html"
-                                    class="link-arrow"
-                                >
-                                    Plan Trip →
-                                </a>
+                                    <p>
+                                        Roof of the world. Leh, Nubra Valley,
+                                        Pangong Lake, Khardung La & ancient
+                                        Buddhist monasteries.
+                                    </p>
 
-                            </div>
+                                    <div class="dest-meta">
 
-                        </article>
+                                        <span class="dest-price">
+                                            From ₹18,999
+                                        </span>
 
+                                        <span class="dest-tag">
+                                            7–9 Days
+                                        </span>
 
+                                    </div>
 
-                        <!-- =========================
-                             VARANASI / GOLDEN TRIANGLE
-                        ========================== -->
-
-                        <article
-                            class="glass dest-card reveal"
-                        >
-
-                            <div class="dest-img">
-
-                                <img
-                                    src="images/varanasi.jpg"
-                                    alt="Varanasi Ganga Ghats and Golden Triangle"
-                                    loading="lazy"
-                                >
-
-                                <h3>
-                                    Varanasi & Golden Triangle
-                                </h3>
-
-                            </div>
-
-
-                            <div class="dest-body">
-
-                                <p>
-                                    Spiritual India. Ganga Aarti,
-                                    ancient ghats, Taj Mahal,
-                                    Jaipur forts & Delhi heritage.
-                                </p>
-
-
-                                <div class="dest-meta">
-
-                                    <span class="dest-price">
-                                        From ₹14,999
-                                    </span>
-
-                                    <span class="dest-tag">
-                                        6–8 Days
-                                    </span>
+                                    <a
+                                        href="contact.html?destination=Ladakh"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
 
                                 </div>
 
+                            </article>
 
-                                <a
-                                    href="contact.html"
-                                    class="link-arrow"
-                                >
-                                    Plan Trip →
-                                </a>
 
-                            </div>
+                            <!-- KASHMIR -->
 
-                        </article>
+                            <article class="glass dest-card reveal">
 
+                                <div class="dest-img">
+
+                                    <img
+                                        src="images/kashmir.jpg"
+                                        alt="Kashmir Valley"
+                                        loading="lazy"
+                                    >
+
+                                    <h3>
+                                        Kashmir
+                                    </h3>
+
+                                </div>
+
+                                <div class="dest-body">
+
+                                    <p>
+                                        Paradise on Earth. Srinagar houseboats,
+                                        Gulmarg skiing, Pahalgam valleys
+                                        & Mughal gardens.
+                                    </p>
+
+                                    <div class="dest-meta">
+
+                                        <span class="dest-price">
+                                            From ₹15,999
+                                        </span>
+
+                                        <span class="dest-tag">
+                                            5–7 Days
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="contact.html?destination=Kashmir"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- HIMACHAL -->
+
+                            <article class="glass dest-card reveal">
+
+                                <div class="dest-img">
+
+                                    <img
+                                        src="images/himachal.jpg"
+                                        alt="Himachal Pradesh Mountains"
+                                        loading="lazy"
+                                    >
+
+                                    <h3>
+                                        Himachal Pradesh
+                                    </h3>
+
+                                </div>
+
+                                <div class="dest-body">
+
+                                    <p>
+                                        Himalayan escape. Manali, Shimla,
+                                        Dharamshala, Spiti — trekking,
+                                        skiing & mountain serenity.
+                                    </p>
+
+                                    <div class="dest-meta">
+
+                                        <span class="dest-price">
+                                            From ₹9,999
+                                        </span>
+
+                                        <span class="dest-tag">
+                                            4–6 Days
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="contact.html?destination=Himachal%20Pradesh"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- ANDAMAN -->
+
+                            <article class="glass dest-card reveal">
+
+                                <div class="dest-img">
+
+                                    <img
+                                        src="images/andaman.jpg"
+                                        alt="Andaman and Nicobar Islands"
+                                        loading="lazy"
+                                    >
+
+                                    <h3>
+                                        Andaman & Nicobar
+                                    </h3>
+
+                                </div>
+
+                                <div class="dest-body">
+
+                                    <p>
+                                        Tropical island paradise.
+                                        Havelock beaches, scuba diving,
+                                        Cellular Jail & bioluminescent waters.
+                                    </p>
+
+                                    <div class="dest-meta">
+
+                                        <span class="dest-price">
+                                            From ₹22,999
+                                        </span>
+
+                                        <span class="dest-tag">
+                                            5–7 Days
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="contact.html?destination=Andaman%20%26%20Nicobar"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- VARANASI -->
+
+                            <article class="glass dest-card reveal">
+
+                                <div class="dest-img">
+
+                                    <img
+                                        src="images/varanasi.jpg"
+                                        alt="Varanasi Ganga Ghats"
+                                        loading="lazy"
+                                    >
+
+                                    <h3>
+                                        Varanasi & Golden Triangle
+                                    </h3>
+
+                                </div>
+
+                                <div class="dest-body">
+
+                                    <p>
+                                        Spiritual India. Ganga Aarti,
+                                        ancient ghats, Taj Mahal,
+                                        Jaipur forts & Delhi heritage.
+                                    </p>
+
+                                    <div class="dest-meta">
+
+                                        <span class="dest-price">
+                                            From ₹14,999
+                                        </span>
+
+                                        <span class="dest-tag">
+                                            6–8 Days
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="contact.html?destination=Varanasi%20%26%20Golden%20Triangle"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================
+                         INTERNATIONAL DESTINATIONS
+                    ================================== -->
+
+                    <div
+                        id="internationalDestinations"
+                        class="destination-group"
+                    >
+
+                        <div class="destination-heading">
+
+                            <h2>
+                                Popular International Destinations
+                            </h2>
+
+                            <p>
+                                Explore amazing destinations around the world
+                            </p>
+
+                        </div>
+
+
+                        <div class="grid-3">
+
+
+                            <!-- DUBAI -->
+
+                            <article class="glass dest-card reveal">
+
+                                <div class="dest-img">
+
+                                    <img
+                                        src="images/dubai.jpg"
+                                        alt="Dubai"
+                                        loading="lazy"
+                                    >
+
+                                    <h3>
+                                        Dubai
+                                    </h3>
+
+                                </div>
+
+                                <div class="dest-body">
+
+                                    <p>
+                                        Experience futuristic skyscrapers,
+                                        luxury shopping, desert safaris,
+                                        beaches and unforgettable city views.
+                                    </p>
+
+                                    <div class="dest-meta">
+
+                                        <span class="dest-price">
+                                            From ₹39,999
+                                        </span>
+
+                                        <span class="dest-tag">
+                                            4–6 Days
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="contact.html?destination=Dubai"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- THAILAND -->
+
+                            <article class="glass dest-card reveal">
+
+                                <div class="dest-img">
+
+                                    <img
+                                        src="images/thailand.jpg"
+                                        alt="Thailand"
+                                        loading="lazy"
+                                    >
+
+                                    <h3>
+                                        Thailand
+                                    </h3>
+
+                                </div>
+
+                                <div class="dest-body">
+
+                                    <p>
+                                        Tropical beaches, island adventures,
+                                        vibrant nightlife, temples and
+                                        delicious Thai cuisine.
+                                    </p>
+
+                                    <div class="dest-meta">
+
+                                        <span class="dest-price">
+                                            From ₹34,999
+                                        </span>
+
+                                        <span class="dest-tag">
+                                            5–7 Days
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="contact.html?destination=Thailand"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- BALI -->
+
+                            <article class="glass dest-card reveal">
+
+                                <div class="dest-img">
+
+                                    <img
+                                        src="images/bali.jpg"
+                                        alt="Bali Indonesia"
+                                        loading="lazy"
+                                    >
+
+                                    <h3>
+                                        Bali
+                                    </h3>
+
+                                </div>
+
+                                <div class="dest-body">
+
+                                    <p>
+                                        Discover tropical beaches,
+                                        rice terraces, temples, waterfalls
+                                        and beautiful island culture.
+                                    </p>
+
+                                    <div class="dest-meta">
+
+                                        <span class="dest-price">
+                                            From ₹42,999
+                                        </span>
+
+                                        <span class="dest-tag">
+                                            5–7 Days
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="contact.html?destination=Bali"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- SINGAPORE -->
+
+                            <article class="glass dest-card reveal">
+
+                                <div class="dest-img">
+
+                                    <img
+                                        src="images/singapore.jpg"
+                                        alt="Singapore"
+                                        loading="lazy"
+                                    >
+
+                                    <h3>
+                                        Singapore
+                                    </h3>
+
+                                </div>
+
+                                <div class="dest-body">
+
+                                    <p>
+                                        A modern city escape featuring
+                                        Marina Bay, Sentosa, Gardens by the Bay
+                                        and world-class attractions.
+                                    </p>
+
+                                    <div class="dest-meta">
+
+                                        <span class="dest-price">
+                                            From ₹44,999
+                                        </span>
+
+                                        <span class="dest-tag">
+                                            4–6 Days
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="contact.html?destination=Singapore"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- MALAYSIA -->
+
+                            <article class="glass dest-card reveal">
+
+                                <div class="dest-img">
+
+                                    <img
+                                        src="images/malaysia.jpg"
+                                        alt="Malaysia"
+                                        loading="lazy"
+                                    >
+
+                                    <h3>
+                                        Malaysia
+                                    </h3>
+
+                                </div>
+
+                                <div class="dest-body">
+
+                                    <p>
+                                        Explore Kuala Lumpur, Langkawi,
+                                        tropical islands, cultural attractions
+                                        and modern city life.
+                                    </p>
+
+                                    <div class="dest-meta">
+
+                                        <span class="dest-price">
+                                            From ₹36,999
+                                        </span>
+
+                                        <span class="dest-tag">
+                                            5–7 Days
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="contact.html?destination=Malaysia"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- MALDIVES -->
+
+                            <article class="glass dest-card reveal">
+
+                                <div class="dest-img">
+
+                                    <img
+                                        src="images/maldives.jpg"
+                                        alt="Maldives"
+                                        loading="lazy"
+                                    >
+
+                                    <h3>
+                                        Maldives
+                                    </h3>
+
+                                </div>
+
+                                <div class="dest-body">
+
+                                    <p>
+                                        Crystal-clear waters, luxury resorts,
+                                        private beaches, water villas and
+                                        romantic island experiences.
+                                    </p>
+
+                                    <div class="dest-meta">
+
+                                        <span class="dest-price">
+                                            From ₹49,999
+                                        </span>
+
+                                        <span class="dest-tag">
+                                            4–6 Days
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="contact.html?destination=Maldives"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- SRI LANKA -->
+
+                            <article class="glass dest-card reveal">
+
+                                <div class="dest-img">
+
+                                    <img
+                                        src="images/srilanka.jpg"
+                                        alt="Sri Lanka"
+                                        loading="lazy"
+                                    >
+
+                                    <h3>
+                                        Sri Lanka
+                                    </h3>
+
+                                </div>
+
+                                <div class="dest-body">
+
+                                    <p>
+                                        Beaches, tea plantations, ancient
+                                        temples, wildlife and scenic hill
+                                        country adventures.
+                                    </p>
+
+                                    <div class="dest-meta">
+
+                                        <span class="dest-price">
+                                            From ₹32,999
+                                        </span>
+
+                                        <span class="dest-tag">
+                                            5–7 Days
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="contact.html?destination=Sri%20Lanka"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- EUROPE -->
+
+                            <article class="glass dest-card reveal">
+
+                                <div class="dest-img">
+
+                                    <img
+                                        src="images/europe.jpg"
+                                        alt="Europe"
+                                        loading="lazy"
+                                    >
+
+                                    <h3>
+                                        Europe
+                                    </h3>
+
+                                </div>
+
+                                <div class="dest-body">
+
+                                    <p>
+                                        Discover iconic European cities,
+                                        historic landmarks, beautiful
+                                        countryside and unforgettable culture.
+                                    </p>
+
+                                    <div class="dest-meta">
+
+                                        <span class="dest-price">
+                                            From ₹99,999
+                                        </span>
+
+                                        <span class="dest-tag">
+                                            8–12 Days
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="contact.html?destination=Europe"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- SWITZERLAND -->
+
+                            <article class="glass dest-card reveal">
+
+                                <div class="dest-img">
+
+                                    <img
+                                        src="images/switzerland.jpg"
+                                        alt="Switzerland"
+                                        loading="lazy"
+                                    >
+
+                                    <h3>
+                                        Switzerland
+                                    </h3>
+
+                                </div>
+
+                                <div class="dest-body">
+
+                                    <p>
+                                        Snow-capped Alps, scenic train journeys,
+                                        beautiful lakes, charming villages
+                                        and romantic escapes.
+                                    </p>
+
+                                    <div class="dest-meta">
+
+                                        <span class="dest-price">
+                                            From ₹1,19,999
+                                        </span>
+
+                                        <span class="dest-tag">
+                                            7–10 Days
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="contact.html?destination=Switzerland"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- AUSTRALIA -->
+
+                            <article class="glass dest-card reveal">
+
+                                <div class="dest-img">
+
+                                    <img
+                                        src="images/australia.jpg"
+                                        alt="Australia"
+                                        loading="lazy"
+                                    >
+
+                                    <h3>
+                                        Australia
+                                    </h3>
+
+                                </div>
+
+                                <div class="dest-body">
+
+                                    <p>
+                                        Explore Sydney, Melbourne, Gold Coast,
+                                        Great Barrier Reef and Australia's
+                                        incredible natural landscapes.
+                                    </p>
+
+                                    <div class="dest-meta">
+
+                                        <span class="dest-price">
+                                            From ₹1,09,999
+                                        </span>
+
+                                        <span class="dest-tag">
+                                            8–12 Days
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="contact.html?destination=Australia"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- JAPAN -->
+
+                            <article class="glass dest-card reveal">
+
+                                <div class="dest-img">
+
+                                    <img
+                                        src="images/japan.jpg"
+                                        alt="Japan"
+                                        loading="lazy"
+                                    >
+
+                                    <h3>
+                                        Japan
+                                    </h3>
+
+                                </div>
+
+                                <div class="dest-body">
+
+                                    <p>
+                                        Experience Tokyo, Kyoto, Mount Fuji,
+                                        traditional temples and Japan's
+                                        unique culture.
+                                    </p>
+
+                                    <div class="dest-meta">
+
+                                        <span class="dest-price">
+                                            From ₹1,19,999
+                                        </span>
+
+                                        <span class="dest-tag">
+                                            7–10 Days
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="contact.html?destination=Japan"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- TURKEY -->
+
+                            <article class="glass dest-card reveal">
+
+                                <div class="dest-img">
+
+                                    <img
+                                        src="images/turkey.jpg"
+                                        alt="Turkey"
+                                        loading="lazy"
+                                    >
+
+                                    <h3>
+                                        Turkey
+                                    </h3>
+
+                                </div>
+
+                                <div class="dest-body">
+
+                                    <p>
+                                        Explore Istanbul, Cappadocia,
+                                        ancient ruins, Mediterranean beaches
+                                        and Turkish culture.
+                                    </p>
+
+                                    <div class="dest-meta">
+
+                                        <span class="dest-price">
+                                            From ₹74,999
+                                        </span>
+
+                                        <span class="dest-tag">
+                                            6–9 Days
+                                        </span>
+
+                                    </div>
+
+                                    <a
+                                        href="contact.html?destination=Turkey"
+                                        class="link-arrow"
+                                    >
+                                        Plan Trip →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+
+                        </div>
 
                     </div>
 
@@ -606,9 +1305,9 @@
             </section>
 
 
-            <!-- =================================================
+            <!-- =========================================
                  CALL TO ACTION
-            ================================================== -->
+            ========================================== -->
 
             <section class="section">
 
@@ -625,7 +1324,6 @@
                             budget and dates. Our travel experts
                             will create a personalised itinerary for you.
                         </p>
-
 
                         <div class="hero-cta">
 
@@ -657,7 +1355,7 @@
         </main>
 
 
-        <!-- Footer loaded by main.js -->
+        <!-- Footer -->
         <div id="site-footer"></div>
 
 
@@ -666,6 +1364,79 @@
 
     <!-- Main JavaScript -->
     <script src="js/main.js"></script>
+
+
+    <!-- =========================================
+         DESTINATION FILTER JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const destinationType =
+                    document.getElementById(
+                        "destinationType"
+                    );
+
+                const domestic =
+                    document.getElementById(
+                        "domesticDestinations"
+                    );
+
+                const international =
+                    document.getElementById(
+                        "internationalDestinations"
+                    );
+
+
+                if (
+                    !destinationType ||
+                    !domestic ||
+                    !international
+                ) {
+                    return;
+                }
+
+
+                destinationType.addEventListener(
+                    "change",
+                    function () {
+
+                        if (
+                            this.value === "international"
+                        ) {
+
+                            domestic.classList.remove(
+                                "active"
+                            );
+
+                            international.classList.add(
+                                "active"
+                            );
+
+                        } else {
+
+                            international.classList.remove(
+                                "active"
+                            );
+
+                            domestic.classList.add(
+                                "active"
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
 
 </body>
 
