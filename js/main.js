@@ -5,9 +5,9 @@ const SITE = {
     tagline: 'Journey Beyond Imagination',
     logo: 'images/logo.png',
     domain: 'uniquevacations.in',
-    whatsapp: '919166010400',
+    whatsapp: '919785942039',
     email: 'info@uniquevacations.in',
-    phone: '+91 91660 10400'
+    phone: '+91 9785 942039'
 };
 
 const NAV_LINKS = [
