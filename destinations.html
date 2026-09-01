@@ -158,6 +158,53 @@
 
         }
 
+    
+        .destination-toggle { display:flex; justify-content:center; gap:10px; max-width:460px; margin:0 auto 45px; }
+        .destination-toggle button { border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:13px 24px; background:rgba(255,255,255,0.06); color:inherit; font-family:inherit; font-size:1rem; font-weight:600; cursor:pointer; transition:.2s ease; }
+        .destination-toggle button.active { background:var(--accent); color:#fff; border-color:var(--accent); }
+        .destination-toggle button:hover { border-color:var(--accent-light); }
+        @media (max-width:600px) { .destination-toggle { width:100%; margin-bottom:30px; } .destination-toggle button { flex:1; padding:12px 10px; } }
+
+    
+        /* Shared Domestic / International toggle */
+        .destination-toggle {
+            display:flex;
+            justify-content:center;
+            gap:10px;
+            max-width:460px;
+            margin:0 auto 45px;
+        }
+        .destination-toggle button {
+            border:1px solid rgba(255,255,255,0.15);
+            border-radius:12px;
+            padding:13px 24px;
+            background:rgba(255,255,255,0.06);
+            color:inherit;
+            font-family:inherit;
+            font-size:1rem;
+            font-weight:600;
+            cursor:pointer;
+            transition:.2s ease;
+        }
+        .destination-toggle button.active {
+            background:var(--accent);
+            color:#fff;
+            border-color:var(--accent);
+        }
+        .destination-toggle button:hover {
+            border-color:var(--accent-light);
+        }
+        @media (max-width:600px) {
+            .destination-toggle {
+                width:100%;
+                margin-bottom:30px;
+            }
+            .destination-toggle button {
+                flex:1;
+                padding:12px 10px;
+            }
+        }
+
     </style>
 
 </head>
@@ -217,27 +264,9 @@
                          DESTINATION TYPE DROPDOWN
                     ================================== -->
 
-                    <div class="destination-filter">
-
-                        <label for="destinationType">
-                            Destination Interest
-                        </label>
-
-                        <select
-                            id="destinationType"
-                            name="destinationType"
-                        >
-
-                            <option value="domestic">
-                                Domestic
-                            </option>
-
-                            <option value="international">
-                                International
-                            </option>
-
-                        </select>
-
+                    <div class="destination-toggle" role="tablist" aria-label="Destination type">
+                        <button type="button" class="destination-toggle-btn active" data-destination-type="domestic" role="tab" aria-selected="true">🇮🇳 Domestic</button>
+                        <button type="button" class="destination-toggle-btn" data-destination-type="international" role="tab" aria-selected="false">🌍 International</button>
                     </div>
 
 
@@ -1370,74 +1399,29 @@
          DESTINATION FILTER JAVASCRIPT
     ========================================== -->
 
-    <script>
-
-        document.addEventListener(
-            "DOMContentLoaded",
-            function () {
-
-                const destinationType =
-                    document.getElementById(
-                        "destinationType"
-                    );
-
-                const domestic =
-                    document.getElementById(
-                        "domesticDestinations"
-                    );
-
-                const international =
-                    document.getElementById(
-                        "internationalDestinations"
-                    );
+    
 
 
-                if (
-                    !destinationType ||
-                    !domestic ||
-                    !international
-                ) {
-                    return;
-                }
-
-
-                destinationType.addEventListener(
-                    "change",
-                    function () {
-
-                        if (
-                            this.value === "international"
-                        ) {
-
-                            domestic.classList.remove(
-                                "active"
-                            );
-
-                            international.classList.add(
-                                "active"
-                            );
-
-                        } else {
-
-                            international.classList.remove(
-                                "active"
-                            );
-
-                            domestic.classList.add(
-                                "active"
-                            );
-
-                        }
-
-                    }
-                );
-
-            }
-        );
-
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".destination-toggle-btn");
+            const domestic = document.getElementById("domesticDestinations");
+            const international = document.getElementById("internationalDestinations");
+            if (!buttons.length || !domestic || !international) return;
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    const isDomestic = this.dataset.destinationType === "domestic";
+                    buttons.forEach(btn => {
+                        const active = btn === this;
+                        btn.classList.toggle("active", active);
+                        btn.setAttribute("aria-selected", active ? "true" : "false");
+                    });
+                    domestic.classList.toggle("active", isDomestic);
+                    international.classList.toggle("active", !isDomestic);
+                });
+            });
+        });
     </script>
-
-
 </body>
 
 </html>

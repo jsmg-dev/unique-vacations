@@ -1666,3 +1666,146 @@ textarea {
         transform: none;
     }
 }
+
+/* =========================================================
+   DOMESTIC / INTERNATIONAL TOGGLE
+   Shared by Packages and Destinations pages
+   ========================================================= */
+
+.destination-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+    margin: 0 auto 40px;
+    padding: 5px;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 999px;
+    box-shadow: var(--shadow);
+}
+
+.destination-toggle button {
+    min-width: 150px;
+    padding: 11px 22px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--muted);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.destination-toggle button:hover {
+    color: var(--primary);
+}
+
+.destination-toggle button.active {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: #fff;
+    box-shadow: var(--shadow-glow);
+}
+
+.destination-toggle button:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+}
+
+.package-group[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    .destination-toggle {
+        width: 100%;
+        max-width: 360px;
+        margin-bottom: 30px;
+    }
+
+    .destination-toggle button {
+        min-width: 0;
+        flex: 1;
+        padding: 10px 12px;
+        font-size: 0.82rem;
+    }
+}
+
+
+/* =========================================================
+   SHARED DOMESTIC / INTERNATIONAL TOGGLE
+   ========================================================= */
+
+.destination-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: fit-content;
+    margin: 0 auto 40px;
+    padding: 5px;
+    background: var(--bg-light);
+    border: 1px solid var(--glass-border);
+    border-radius: 999px;
+    box-shadow: var(--shadow);
+}
+
+.destination-toggle button {
+    min-width: 150px;
+    padding: 11px 22px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--muted);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.2;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.destination-toggle button:hover {
+    color: var(--primary);
+    transform: translateY(-1px);
+}
+
+.destination-toggle button.active {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: #fff;
+    box-shadow: var(--shadow-glow);
+}
+
+.destination-toggle button:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+}
+
+.package-group[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    .destination-toggle {
+        width: min(100%, 360px);
+        margin-bottom: 30px;
+    }
+
+    .destination-toggle button {
+        min-width: 0;
+        flex: 1;
+        padding: 10px 12px;
+        font-size: 0.82rem;
+    }
+}

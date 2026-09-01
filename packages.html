@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,13 +17,22 @@
             <div class="page-hero">
                 <div class="container">
                     <h1>Tour Packages</h1>
-                    <p>All-inclusive packages with hotels, transfers & guided tours</p>
+                    <p>Choose from our domestic and international travel packages</p>
                 </div>
             </div>
             <section class="section">
                 <div class="container">
-                    <div class="grid-3">
-                        <article class="glass glass-card package-card reveal">
+                    
+                    <div class="destination-toggle" role="tablist" aria-label="Destination type">
+                        <button type="button" class="destination-toggle-btn active"
+                                data-package-filter="domestic" role="tab" aria-selected="true">🇮🇳 Domestic</button>
+                        <button type="button" class="destination-toggle-btn"
+                                data-package-filter="international" role="tab" aria-selected="false">🌍 International</button>
+                    </div>
+
+                    <div id="domestic-packages" class="package-group" role="tabpanel">
+                        <div class="grid-3">
+<article class="glass glass-card package-card reveal">
                             <div class="package-header">
                                 <h3>Golden Triangle Classic</h3>
                                 <span class="dest-tag">Best Seller</span>
@@ -40,7 +48,7 @@
                             <div class="package-price">₹24,999 <small>/ person</small></div>
                             <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
                         </article>
-                        <article class="glass glass-card package-card reveal">
+<article class="glass glass-card package-card reveal">
                             <div class="package-header">
                                 <h3>Kerala Honeymoon Special</h3>
                                 <span class="dest-tag">Honeymoon</span>
@@ -56,7 +64,7 @@
                             <div class="package-price">₹42,999 <small>/ couple</small></div>
                             <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
                         </article>
-                        <article class="glass glass-card package-card reveal">
+<article class="glass glass-card package-card reveal">
                             <div class="package-header">
                                 <h3>Ladakh Adventure</h3>
                                 <span class="dest-tag">Adventure</span>
@@ -72,7 +80,7 @@
                             <div class="package-price">₹38,999 <small>/ person</small></div>
                             <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
                         </article>
-                        <article class="glass glass-card package-card reveal">
+<article class="glass glass-card package-card reveal">
                             <div class="package-header">
                                 <h3>Goa Beach Escape</h3>
                                 <span class="dest-tag">Beach</span>
@@ -88,7 +96,7 @@
                             <div class="package-price">₹11,999 <small>/ person</small></div>
                             <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
                         </article>
-                        <article class="glass glass-card package-card reveal">
+<article class="glass glass-card package-card reveal">
                             <div class="package-header">
                                 <h3>Rajasthan Royal Circuit</h3>
                                 <span class="dest-tag">Heritage</span>
@@ -104,7 +112,7 @@
                             <div class="package-price">₹34,999 <small>/ person</small></div>
                             <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
                         </article>
-                        <article class="glass glass-card package-card reveal">
+<article class="glass glass-card package-card reveal">
                             <div class="package-header">
                                 <h3>Kashmir Paradise</h3>
                                 <span class="dest-tag">Nature</span>
@@ -120,7 +128,7 @@
                             <div class="package-price">₹22,999 <small>/ person</small></div>
                             <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
                         </article>
-                        <article class="glass glass-card package-card reveal">
+<article class="glass glass-card package-card reveal">
                             <div class="package-header">
                                 <h3>Andaman Island Hopper</h3>
                                 <span class="dest-tag">Island</span>
@@ -136,7 +144,7 @@
                             <div class="package-price">₹28,999 <small>/ person</small></div>
                             <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
                         </article>
-                        <article class="glass glass-card package-card reveal">
+<article class="glass glass-card package-card reveal">
                             <div class="package-header">
                                 <h3>Family Himachal Fun</h3>
                                 <span class="dest-tag">Family</span>
@@ -152,7 +160,7 @@
                             <div class="package-price">₹19,999 <small>/ person</small></div>
                             <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
                         </article>
-                        <article class="glass glass-card package-card reveal">
+<article class="glass glass-card package-card reveal">
                             <div class="package-header">
                                 <h3>Custom Package</h3>
                                 <span class="dest-tag">Flexible</span>
@@ -168,7 +176,68 @@
                             <div class="package-price">On Request</div>
                             <a href="contact.html" class="btn btn-accent btn-sm">Get Quote</a>
                         </article>
+                        </div>
                     </div>
+
+                    <div id="international-packages" class="package-group" role="tabpanel" hidden>
+                        <div class="grid-3">
+
+                        <article class="glass glass-card package-card reveal">
+                            <div class="package-header"><h3>Dubai Luxury Escape</h3><span class="dest-tag">International</span></div>
+                            <p style="color:var(--muted);font-size:0.9rem;">Dubai · Abu Dhabi — 6D/5N</p>
+                            <ul class="package-features"><li>4-star hotel accommodation</li><li>Desert safari with dinner</li><li>Burj Khalifa experience</li><li>Dubai city & Abu Dhabi tour</li><li>Airport transfers</li></ul>
+                            <div class="package-price">On Request</div>
+                            <a href="contact.html?package=Dubai%20Luxury%20Escape" class="btn btn-primary btn-sm">Get Quote</a>
+                        </article>
+                        <article class="glass glass-card package-card reveal">
+                            <div class="package-header"><h3>Bali Island Bliss</h3><span class="dest-tag">International</span></div>
+                            <p style="color:var(--muted);font-size:0.9rem;">Bali · Ubud · Nusa Dua — 6D/5N</p>
+                            <ul class="package-features"><li>Beach resort accommodation</li><li>Ubud cultural sightseeing</li><li>Temple & waterfall tours</li><li>Nusa Dua leisure day</li><li>Airport transfers</li></ul>
+                            <div class="package-price">On Request</div>
+                            <a href="contact.html?package=Bali%20Island%20Bliss" class="btn btn-primary btn-sm">Get Quote</a>
+                        </article>
+                        <article class="glass glass-card package-card reveal">
+                            <div class="package-header"><h3>Singapore City Escape</h3><span class="dest-tag">International</span></div>
+                            <p style="color:var(--muted);font-size:0.9rem;">Singapore — 5D/4N</p>
+                            <ul class="package-features"><li>4-star city hotel stay</li><li>Gardens by the Bay</li><li>Universal Studios option</li><li>City & Marina Bay tour</li><li>Airport transfers</li></ul>
+                            <div class="package-price">On Request</div>
+                            <a href="contact.html?package=Singapore%20City%20Escape" class="btn btn-primary btn-sm">Get Quote</a>
+                        </article>
+                        <article class="glass glass-card package-card reveal">
+                            <div class="package-header"><h3>Maldives Island Retreat</h3><span class="dest-tag">International</span></div>
+                            <p style="color:var(--muted);font-size:0.9rem;">Maldives — 5D/4N</p>
+                            <ul class="package-features"><li>Beach resort accommodation</li><li>Daily breakfast</li><li>Airport & speedboat transfers</li><li>Island leisure experiences</li><li>Optional romantic dinner</li></ul>
+                            <div class="package-price">On Request</div>
+                            <a href="contact.html?package=Maldives%20Island%20Retreat" class="btn btn-primary btn-sm">Get Quote</a>
+                        </article>
+
+                        </div>
+                    </div>
+
+                    <script>
+                    (function () {
+                        const buttons = document.querySelectorAll('.destination-toggle-btn');
+                        const groups = {
+                            domestic: document.getElementById('domestic-packages'),
+                            international: document.getElementById('international-packages')
+                        };
+
+                        buttons.forEach(button => {
+                            button.addEventListener('click', function () {
+                                const type = this.dataset.packageFilter;
+                                buttons.forEach(btn => {
+                                    const active = btn === this;
+                                    btn.classList.toggle('active', active);
+                                                                        btn.setAttribute('aria-selected', active ? 'true' : 'false');
+                                });
+                                Object.entries(groups).forEach(([key, group]) => {
+                                    group.hidden = key !== type;
+                                });
+                            });
+                        });
+                    })();
+                    </script>
+
                 </div>
             </section>
         </main>
@@ -177,6 +246,3 @@
     <script src="js/main.js"></script>
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="en">
