@@ -55,13 +55,13 @@
                 <div class="container">
                     
                     <div class="destination-toggle" role="tablist" aria-label="Destination type">
-                        <button type="button" class="destination-toggle-btn active"
-                                data-package-filter="domestic" role="tab" aria-selected="true">🇮🇳 Domestic</button>
                         <button type="button" class="destination-toggle-btn"
-                                data-package-filter="international" role="tab" aria-selected="false">🌍 International</button>
+                                data-package-filter="domestic" role="tab" aria-selected="false">🇮🇳 Domestic</button>
+                        <button type="button" class="destination-toggle-btn active"
+                                data-package-filter="international" role="tab" aria-selected="true">🌍 International</button>
                     </div>
 
-                    <div id="domestic-packages" class="package-group" role="tabpanel">
+                    <div id="domestic-packages" class="package-group" role="tabpanel" hidden>
                         <div class="grid-3">
 <article class="glass glass-card package-card reveal">
                             <div class="package-header">
@@ -210,7 +210,7 @@
                         </div>
                     </div>
 
-                    <div id="international-packages" class="package-group" role="tabpanel" hidden>
+                    <div id="international-packages" class="package-group" role="tabpanel">
                         <div class="grid-3">
 
                         <article class="glass glass-card package-card reveal">
