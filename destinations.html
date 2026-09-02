@@ -75,47 +75,6 @@
     >
 
     <style>
-
-        /* =========================================
-           DESTINATION FILTER
-        ========================================= */
-
-        .destination-filter {
-            max-width: 420px;
-            margin: 0 auto 45px;
-            text-align: center;
-        }
-
-        .destination-filter label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: var(--accent-light);
-            font-size: 1rem;
-        }
-
-        .destination-filter select {
-            width: 100%;
-            padding: 14px 18px;
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.15);
-            background: rgba(255,255,255,0.06);
-            color: inherit;
-            font-family: inherit;
-            font-size: 1rem;
-            outline: none;
-            cursor: pointer;
-        }
-
-        .destination-filter select:focus {
-            border-color: var(--accent-light);
-        }
-
-        .destination-filter select option {
-            background: #101b2d;
-            color: #fff;
-        }
-
         /* =========================================
            DESTINATION GROUP
         ========================================= */
@@ -158,55 +117,44 @@
 
         }
 
-    
-        .destination-toggle { display:flex; justify-content:center; gap:10px; max-width:460px; margin:0 auto 45px; }
-        .destination-toggle button { border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:13px 24px; background:rgba(255,255,255,0.06); color:inherit; font-family:inherit; font-size:1rem; font-weight:600; cursor:pointer; transition:.2s ease; }
-        .destination-toggle button.active { background:var(--accent); color:#fff; border-color:var(--accent); }
-        .destination-toggle button:hover { border-color:var(--accent-light); }
-        @media (max-width:600px) { .destination-toggle { width:100%; margin-bottom:30px; } .destination-toggle button { flex:1; padding:12px 10px; } }
 
     
         /* Shared Domestic / International toggle */
-        .destination-toggle {
-            display:flex;
-            justify-content:center;
-            gap:10px;
-            max-width:460px;
-            margin:0 auto 45px;
-        }
-        .destination-toggle button {
-            border:1px solid rgba(255,255,255,0.15);
-            border-radius:12px;
-            padding:13px 24px;
-            background:rgba(255,255,255,0.06);
-            color:inherit;
-            font-family:inherit;
-            font-size:1rem;
-            font-weight:600;
-            cursor:pointer;
-            transition:.2s ease;
-        }
-        .destination-toggle button.active {
-            background:var(--accent);
-            color:#fff;
-            border-color:var(--accent);
-        }
-        .destination-toggle button:hover {
-            border-color:var(--accent-light);
-        }
-        @media (max-width:600px) {
-            .destination-toggle {
-                width:100%;
-                margin-bottom:30px;
-            }
-            .destination-toggle button {
-                flex:1;
-                padding:12px 10px;
-            }
-        }
+
 
     </style>
 
+<style>
+
+.destination-toggle {
+    display:flex !important; align-items:center !important; justify-content:center !important;
+    gap:0 !important; width:304px !important; max-width:304px !important; height:50px !important;
+    box-sizing:border-box !important; margin:0 auto 40px !important; padding:4px !important;
+    background:#f1f5f2 !important; border:1px solid #dfe7e1 !important;
+    border-radius:28px !important; box-shadow:0 4px 14px rgba(0,0,0,.06) !important;
+}
+.destination-toggle button, .destination-toggle .destination-toggle-btn {
+    flex:1 1 50% !important; width:50% !important; min-width:0 !important; height:40px !important;
+    box-sizing:border-box !important; margin:0 !important; padding:0 14px !important;
+    border:0 !important; border-radius:22px !important; background:transparent !important;
+    color:#53615a !important; font-family:var(--font-body) !important; font-size:.92rem !important;
+    font-weight:600 !important; line-height:40px !important; text-align:center !important;
+    white-space:nowrap !important; cursor:pointer !important; appearance:none !important;
+    -webkit-appearance:none !important; transition:background .2s ease,color .2s ease,box-shadow .2s ease !important;
+}
+.destination-toggle button.active, .destination-toggle .destination-toggle-btn.active {
+    background:var(--primary) !important; color:#fff !important;
+    box-shadow:0 3px 10px rgba(46,125,50,.20) !important;
+}
+.destination-toggle button:hover:not(.active), .destination-toggle .destination-toggle-btn:hover:not(.active) {
+    background:#e7eee9 !important; color:var(--primary) !important;
+}
+@media (max-width:600px) {
+    .destination-toggle { width:min(100%,304px) !important; max-width:304px !important; height:48px !important; margin-bottom:30px !important; }
+    .destination-toggle button, .destination-toggle .destination-toggle-btn { height:38px !important; line-height:38px !important; font-size:.84rem !important; padding:0 8px !important; }
+}
+
+</style>
 </head>
 
 
