@@ -1,0 +1,19 @@
+UNIQUE VACATIONS - DESTINATION SEO UPDATE
+
+Added destination landing pages:
+- Dubai: https://www.uniquevacations.in/dubai-tour-packages.html
+- Bali: https://www.uniquevacations.in/bali-tour-packages.html
+- Maldives: https://www.uniquevacations.in/maldives-tour-packages.html
+- Thailand: https://www.uniquevacations.in/thailand-tour-packages.html
+- Singapore: https://www.uniquevacations.in/singapore-tour-packages.html
+- Kashmir: https://www.uniquevacations.in/kashmir-tour-packages.html
+- Rajasthan: https://www.uniquevacations.in/rajasthan-tour-packages.html
+- Kerala: https://www.uniquevacations.in/kerala-tour-packages.html
+
+After deployment:
+1. Upload/replace the project files in the website root, preserving css/, js/, images/, CNAME and the Google verification HTML file.
+2. Confirm each landing page opens over HTTPS.
+3. In Google Search Console > Sitemaps, resubmit sitemap.xml (or wait for Google to reread it).
+4. Use URL Inspection on each new page and click Request Indexing if it is not indexed.
+5. Check every package price, inclusions and destination details before advertising; no package prices were invented on the new pages.
+6. Rankings are not guaranteed; monitor Search Console impressions/clicks over time.
